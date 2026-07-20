@@ -13,7 +13,7 @@ const directionTabs = [
 
 const examples = {
   "latin-to-kannada": ["kaso asai", "boro dis", "dev borem karoon", "jevan", "udak"],
-  "kannada-to-latin": ["ಕಸೊ ಅಸೈ", "ಬೊರೊ ದೀಸ್", "ದೇವ್ ಬೊರೆಂ ಕರುಂ", "ಜೆವಂ", "ಉದಕ್"],
+  "kannada-to-latin": ["ಕಸೊ ಅಸೈ", "ಬೊರೊ ದಿಸ್", "ದೇವ್ ಬೊರೆಂ ಕರುಂ", "ಜೆವನ್", "ಉದಕ್"],
 };
 
 export default function App() {

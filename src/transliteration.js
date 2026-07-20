@@ -121,7 +121,11 @@ export function kannadaToLatinTransliterate(text) {
   while (i < text.length) {
     if (text[i] === "ಂ") { result += "m"; i++; continue; }
     if (text[i] === "ಃ") { result += "h"; i++; continue; }
-    if (text[i] === "್") { i++; continue; }
+    if (text[i] === "್") {
+      if (result.endsWith("a")) result = result.slice(0, -1);
+      i++;
+      continue;
+    }
 
     let isMatra = false;
     for (const [latin, sign] of Object.entries(VOWEL_SIGNS)) {
