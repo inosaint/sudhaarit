@@ -7,7 +7,7 @@ export const VOWELS = [
 ];
 
 export const CONSONANTS = [
-  ["ಕ", "ka"], ["ಖ", "kha"], ["ಗ", "ga"], ["ಘ", "ggha"],
+  ["ಕ", "ka/ca"], ["ಖ", "kha"], ["ಗ", "ga"], ["ಘ", "ggha"],
   ["ಙ", "ngna/gna"],
   ["ಚ", "cha"], ["ಛ", "chha"], ["ಜ", "ja"], ["ಝ", "jha/za"],
   ["ಞ", "jna/nya"],
@@ -15,9 +15,9 @@ export const CONSONANTS = [
   ["ಣ", "nna"],
   ["ತ", "tha"], ["ಥ", "thha"], ["ದ", "da"], ["ಧ", "dha"],
   ["ನ", "na"],
-  ["ಪ", "pa"], ["ಫ", "pha"], ["ಬ", "ba"], ["ಭ", "bha"],
-  ["ಮ", "ma"], ["ಯ", "ya"], ["ರ", "ra"], ["ಲ", "la"], ["ವ", "va"],
-  ["ಷ", "shha/sha"], ["ಸ", "sa"], ["ಹ", "ha"], ["ಳ", "lla"],
+  ["ಪ", "pa"], ["ಫ", "pha/fa"], ["ಬ", "ba"], ["ಭ", "bha"],
+  ["ಮ", "ma"], ["ಯ", "ya"], ["ರ", "ra"], ["ಲ", "la"], ["ವ", "va/wa"],
+  ["ಷ", "shha/sha"], ["ಸ", "sa"], ["ಹ", "ha"], ["ಳ", "lla"], ["ಕ್ಷ", "ksha/xa"],
 ];
 
 const VOWEL_SIGNS = {
@@ -28,7 +28,8 @@ const VOWEL_SIGNS = {
 
 const kannadaToLatin = new Map();
 VOWELS.forEach(([k, l]) => kannadaToLatin.set(k, l));
-CONSONANTS.forEach(([k, l]) => kannadaToLatin.set(k, l));
+// Reverse direction uses the first spelling of each "a/b" variant.
+CONSONANTS.forEach(([k, l]) => kannadaToLatin.set(k, l.split("/")[0]));
 
 const CONSONANT_ROOTS = [];
 CONSONANTS.forEach(([kannada, latin]) => {
