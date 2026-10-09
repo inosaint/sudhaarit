@@ -12,8 +12,8 @@ const directionTabs = [
 ];
 
 const examples = {
-  "latin-to-kannada": ["kaso asai", "boro dis", "dev borem karoon", "jevan", "udak"],
-  "kannada-to-latin": ["ಕಸೊ ಅಸೈ", "ಬೊರೊ ದಿಸ್", "ದೇವ್ ಬೊರೆಂ ಕರುಂ", "ಜೆವನ್", "ಉದಕ್"],
+  "latin-to-kannada": ["kaso asai", "boro dis", "dev borem karoon", "jevann", "udak"],
+  "kannada-to-latin": ["ಕಸೊ ಅಸೈ", "ಬೊರೊ ದಿಸ್", "ದೇವ್ ಬೊರೆಂ ಕರುಂ", "ಜೆವಣ್", "ಉದಕ್"],
 };
 
 export default function App() {
